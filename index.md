@@ -1,2 +1,2 @@
 # uipps.github.io
-github pages测试 ， 去掉 index.html，增加index.md文件
+personal github pages， index.html、index.md并存，网页优先显示index.html的内容

@@ -1,2 +1,2 @@
 # uipps.github.io
-github pages测试
+personal github pages
