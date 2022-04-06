@@ -97,6 +97,9 @@
         <li>...即将登场...</li>
       </ul>
     </div>
+    <!--#include file="tests/ssi/donate.html"-->
+    <!--#include file="/tests/ssi/donate.html"-->
+	<!--
 	<div class="left_donate">
       <h3>捐赠：<span style="font-size:12px; font-weight:normal">您的捐赠部分用于希望工程</span></h3>
       <ul>
@@ -108,7 +111,7 @@
         <br />
         <li>收集不易,捐赠1分是1分</li>
       </ul>
-    </div>
+    </div>-->
   </div>
 </div>
 
