@@ -1,215 +1,256 @@
 <html>
-  <head>
-	  <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
-    <title>象棋_益智小游戏普及_游普网</title>
-    <meta name="description" content="益智小游戏, 在线中国象棋" />
-    <meta name="keywords" content="益智,游戏,中国象棋,象棋" />
-    <script type="text/javascript" src="book.js"></script>
-    <script type="text/javascript" src="position.js"></script>
-    <script type="text/javascript" src="search.js"></script>
-    <script type="text/javascript" src="board.js"></script>
-    <script type="text/javascript" src="cchess.js"></script>
-    <style type="text/css"><!--
-span.td {
-  display: inline-block;
-}
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
-div.label {
-  font-size: 14px;
-  padding:2px;
-}
+  <title>象棋_益智小游戏普及_游普网</title>
+  <meta name="description" content="益智小游戏, 在线中国象棋" />
+  <meta name="keywords" content="益智,游戏,中国象棋,象棋" />
+  <script type="text/javascript" src="book.js"></script>
+  <script type="text/javascript" src="position.js"></script>
+  <script type="text/javascript" src="search.js"></script>
+  <script type="text/javascript" src="board.js"></script>
+  <script type="text/javascript" src="cchess.js"></script>
+  <style type="text/css"><!--
+    span.td {
+      display: inline-block;
+    }
 
-select {
-  font-size: 14px;
-  width: 108px;
-  padding:2px;
-}
+    div.label {
+      font-size: 14px;
+      padding: 2px;
+    }
 
-option {
-  font-size: 14px;
-}
+    select {
+      font-size: 14px;
+      width: 108px;
+      padding: 2px;
+    }
 
-input.button {
-  font-size: 14px;
-  width: 108px;
-}
+    option {
+      font-size: 14px;
+    }
 
-label {
-  font-size: 14px;
-}
+    input.button {
+      font-size: 14px;
+      width: 108px;
+    }
+
+    label {
+      font-size: 14px;
+    }
 
     /* header begin */
-    #header{ margin:0 auto; clear:both;}
-    #gog{padding:3px 8px 0;font-size:12px; font-family:"宋体";}
-    #gbar,#guser{padding-top:1px !important}
-    #gbar{float:left;height:22px}
-    #guser{padding-bottom:7px !important;text-align:right}
-    .gb1{margin-right:.5em;zoom:1}
+    #header {
+      margin: 0 auto;
+      clear: both;
+    }
+
+    #gog {
+      padding: 3px 8px 0;
+      font-size: 12px;
+      font-family: "宋体";
+    }
+
+    #gbar,
+    #guser {
+      padding-top: 1px !important
+    }
+
+    #gbar {
+      float: left;
+      height: 22px
+    }
+
+    #guser {
+      padding-bottom: 7px !important;
+      text-align: right
+    }
+
+    .gb1 {
+      margin-right: .5em;
+      zoom: 1
+    }
     /* header end */
 
-		/* footer */
-		.footer{margin: 20px 0;text-align: center;line-height: 24px;color:#333;}
-		.footer a{color:#333;}
+    /* footer */
+    .footer {
+      margin: 20px 0;
+      text-align: center;
+      line-height: 24px;
+      color: #333;
+    }
+    .footer a {
+      color: #333;
+    }
 
-    --></style>
+  --></style>
 
-    <script>
-      var _hmt = _hmt || [];
-      (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?6264c59b5568a6de5dc206765b1919ff";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-      })();
-    </script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-26KMRPXVSE"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+  <script>
+    var _hmt = _hmt || [];
+    (function () {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?6264c59b5568a6de5dc206765b1919ff";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-26KMRPXVSE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-26KMRPXVSE');
+  </script>
 
-      gtag('config', 'G-26KMRPXVSE');
-    </script>
+</head>
 
-  </head>
-  <body>
+<body>
   <div id="header">
     <div id="gog">
-      <div id="gbar"><nobr><a class="gb1" href="/" target="_blank">首页</a> <a class="gb1">象棋</a> <a class="gb1" href="/wuziqi/wzq01/" target="_blank">五子棋</a> <a class="gb1" href="/mofun/mf01/" target="_blank">魔方</a> 汉诺塔 <a class="gb4" href="#login">登录</a></nobr></div>
+      <div id="gbar">
+        <nobr><a class="gb1" href="/" target="_blank">首页</a> <a class="gb1">象棋</a> <a class="gb1" href="/wuziqi/wzq01/"
+            target="_blank">五子棋</a> <a class="gb1" href="/mofun/mf01/" target="_blank">魔方</a> 汉诺塔 <a class="gb4" href="#login">登录</a></nobr>
+      </div>
     </div>
   </div>
-    <div style="text-align:center;width:410px;">
-      <span class="td" style="margin-right:10px">
-        <div id="container"></div>
-      </span><span class="td" style="vertical-align:top;width:120px;"><div style="text-align:left">
+  <div style="text-align:center;width:410px;">
+    <span class="td" style="margin-right:10px">
+      <div id="container"></div>
+    </span>
+    <span class="td" style="vertical-align:top;width:120px;">
+      <div style="text-align:left">
         <div class="label">谁先走</div>
         <div><select id="selMoveMode" size="3">
-          <option selected value="0">我先走</option>
-          <option value="1">电脑先走</option>
-          <option value="2">不用电脑</option>
-        </select></div>
+            <option selected value="0">我先走</option>
+            <option value="1">电脑先走</option>
+            <option value="2">不用电脑</option>
+          </select></div>
         <div class="label">先走让子</div>
         <div><select id="selHandicap" style="padding:0px">
-          <option selected value="0">不让子</option>
-          <option value="1">让左马</option>
-          <option value="2">让双马</option>
-          <option value="3">让九子</option>
-        </select></div>
+            <option selected value="0">不让子</option>
+            <option value="1">让左马</option>
+            <option value="2">让双马</option>
+            <option value="3">让九子</option>
+          </select></div>
         <div style="padding-top:2px"><input type="button" class="button" value="重新开始" onclick="restart_click()"></div>
         <div style="padding-top:2px"><input type="button" class="button" value="悔棋" onclick="retract_click()"></div>
         <div style="height:12px"></div>
         <div class="label">电脑水平</div>
         <div><select id="selLevel" size="3" onchange="level_change()">
-          <option selected value="0">入门</option>
-          <option value="1">业余</option>
-          <option value="2">专业</option>
-        </select></div>
+            <option selected value="0">入门</option>
+            <option value="1">业余</option>
+            <option value="2">专业</option>
+          </select></div>
         <div style="height:12px"></div>
         <div><input type="checkbox" class="checkbox" id="chkAnimated" checked onclick="board.animated = checked"><label for="chkAnimated">动画</label></input></div>
         <div><input type="checkbox" class="checkbox" checked onclick="board.setSound(checked)"><label for="chkSound">音效</label></input></div>
         <div style="height:60px"></div>
         <div class="label">步骤</div>
         <div><select id="selMoveList" size="10" style="font-family:宋体" onchange="moveList_change()">
-          <option selected value="0">=== 开始 ===</option>
-        </select></div>
-      </div></span>
+            <option selected value="0">=== 开始 ===</option>
+          </select></div>
+      </div>
+    </span>
   </div>
 
-<!-- footer begin -->
-<div id="footer">
-  <div style="height:15px;"></div>
-  <div class="footer"> <a href="#aboutus.shtml" target="_blank">关于我们</a> | <a href="#contactus.shtml" target="_blank">联系我们</a> | <a href="#lyb.shtml" target="_blank">留言版</a><br />
-    Copyright &copy; 2010-2022 uipps.github.io, All Rights Reserved<br />
-    游普网　<a href="#copyright.shtml" target="_blank">版权所有</a>　<a href="https://beian.miit.gov.cn/" target="_blank">京ICP证11041866号-2</a></div>
-</div>
-<!-- footer end -->
+  <!-- footer begin -->
+  <div id="footer">
+    <div style="height:15px;"></div>
+    <div class="footer"> <a href="#aboutus.shtml" target="_blank">关于我们</a> | <a href="#contactus.shtml"
+        target="_blank">联系我们</a> | <a href="#lyb.shtml" target="_blank">留言版</a><br />
+      Copyright &copy; 2010-2022 uipps.github.io, All Rights Reserved<br />
+      游普网　<a href="#copyright.shtml" target="_blank">版权所有</a>　<a href="https://beian.miit.gov.cn/"
+        target="_blank">京ICP证11041866号-2</a></div>
+  </div>
+  <!-- footer end -->
 
 
-    <script type="text/javascript"><!--
-"use strict";
+  <script type="text/javascript"><!--
+      "use strict";
 
-var STARTUP_FEN = [
-  "rnbakabnr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/9/RNBAKABNR w",
-  "rnbakabnr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/9/RNBAKAB1R w",
-  "rnbakabnr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/9/R1BAKAB1R w",
-  "rnbakabnr/9/1c5c1/p1p1p1p1p/9/9/9/1C5C1/9/RN2K2NR w",
-];
+    var STARTUP_FEN = [
+      "rnbakabnr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/9/RNBAKABNR w",
+      "rnbakabnr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/9/RNBAKAB1R w",
+      "rnbakabnr/9/1c5c1/p1p1p1p1p/9/9/P1P1P1P1P/1C5C1/9/R1BAKAB1R w",
+      "rnbakabnr/9/1c5c1/p1p1p1p1p/9/9/9/1C5C1/9/RN2K2NR w",
+    ];
 
-function createOption(text, value, ie8) {
-  var opt = document.createElement("option");
-  opt.selected = true;
-  opt.value = value;
-  if (ie8) {
-    opt.text = text;
-  } else {
-    opt.innerHTML = text.replace(/ /g, "&nbsp;");
-  }
-  return opt;
-}
-
-var board = new Board(container, "images/", "sounds/");
-board.setSearch(16);
-board.millis = 10;
-board.computer = 1;
-board.onAddMove = function() {
-  var counter = (board.pos.mvList.length >> 1);
-  var space = (counter > 99 ? "    " : "   ");
-  counter = (counter > 9 ? "" : " ") + counter + ".";
-  var text = (board.pos.sdPlayer == 0 ? space : counter) + move2Iccs(board.mvLast);
-  var value = "" + board.mvLast;
-  try {
-    selMoveList.add(createOption(text, value, false));
-  } catch (e) {
-    selMoveList.add(createOption(text, value, true));
-  }
-  selMoveList.scrollTop = selMoveList.scrollHeight;
-};
-
-function level_change() {
-  board.millis = Math.pow(10, selLevel.selectedIndex + 1);
-}
-
-function restart_click() {
-  selMoveList.options.length = 1;
-  selMoveList.selectedIndex = 0;
-  board.computer = 1 - selMoveMode.selectedIndex;
-  board.restart(STARTUP_FEN[selHandicap.selectedIndex]);
-}
-
-function retract_click() {
-  for (var i = board.pos.mvList.length; i < selMoveList.options.length; i ++) {
-    board.pos.makeMove(parseInt(selMoveList.options[i].value));
-  }
-  board.retract();
-  selMoveList.options.length = board.pos.mvList.length;
-  selMoveList.selectedIndex = selMoveList.options.length - 1;
-}
-
-function moveList_change() {
-  if (board.result == RESULT_UNKNOWN) {
-    selMoveList.selectedIndex = selMoveList.options.length - 1;
-    return;
-  }
-  var from = board.pos.mvList.length;
-  var to = selMoveList.selectedIndex;
-  if (from == to + 1) {
-    return;
-  }
-  if (from > to + 1) {
-    for (var i = to + 1; i < from; i ++) {
-      board.pos.undoMakeMove();
+    function createOption(text, value, ie8) {
+      var opt = document.createElement("option");
+      opt.selected = true;
+      opt.value = value;
+      if (ie8) {
+        opt.text = text;
+      } else {
+        opt.innerHTML = text.replace(/ /g, "&nbsp;");
+      }
+      return opt;
     }
-  } else {
-    for (var i = from; i <= to; i ++) {
-      board.pos.makeMove(parseInt(selMoveList.options[i].value));
+
+    var board = new Board(container, "images/", "sounds/");
+    board.setSearch(16);
+    board.millis = 10;
+    board.computer = 1;
+    board.onAddMove = function () {
+      var counter = (board.pos.mvList.length >> 1);
+      var space = (counter > 99 ? "    " : "   ");
+      counter = (counter > 9 ? "" : " ") + counter + ".";
+      var text = (board.pos.sdPlayer == 0 ? space : counter) + move2Iccs(board.mvLast);
+      var value = "" + board.mvLast;
+      try {
+        selMoveList.add(createOption(text, value, false));
+      } catch (e) {
+        selMoveList.add(createOption(text, value, true));
+      }
+      selMoveList.scrollTop = selMoveList.scrollHeight;
+    };
+
+    function level_change() {
+      board.millis = Math.pow(10, selLevel.selectedIndex + 1);
     }
-  }
-  board.flushBoard();
-}
+
+    function restart_click() {
+      selMoveList.options.length = 1;
+      selMoveList.selectedIndex = 0;
+      board.computer = 1 - selMoveMode.selectedIndex;
+      board.restart(STARTUP_FEN[selHandicap.selectedIndex]);
+    }
+
+    function retract_click() {
+      for (var i = board.pos.mvList.length; i < selMoveList.options.length; i++) {
+        board.pos.makeMove(parseInt(selMoveList.options[i].value));
+      }
+      board.retract();
+      selMoveList.options.length = board.pos.mvList.length;
+      selMoveList.selectedIndex = selMoveList.options.length - 1;
+    }
+
+    function moveList_change() {
+      if (board.result == RESULT_UNKNOWN) {
+        selMoveList.selectedIndex = selMoveList.options.length - 1;
+        return;
+      }
+      var from = board.pos.mvList.length;
+      var to = selMoveList.selectedIndex;
+      if (from == to + 1) {
+        return;
+      }
+      if (from > to + 1) {
+        for (var i = to + 1; i < from; i++) {
+          board.pos.undoMakeMove();
+        }
+      } else {
+        for (var i = from; i <= to; i++) {
+          board.pos.makeMove(parseInt(selMoveList.options[i].value));
+        }
+      }
+      board.flushBoard();
+    }
     --></script>
-  </body>
+</body>
+
 </html>
